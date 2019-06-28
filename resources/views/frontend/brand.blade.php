@@ -2,7 +2,7 @@
 @section('content')
     <section class="page page-brand">
         <main class="container">
-            <h1>OUR BRANDS</h1>
+            <h1>Công ty thành viên</h1>
             <p>{!! $page->content !!}</p>
 
             <div class="brands">
