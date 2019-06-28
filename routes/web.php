@@ -15,7 +15,7 @@ Route::get('/', 'PageController@home');
 
 Route::get('/company','Pagecontroller@company');
 
-Route::get('/brand','Pagecontroller@brand');
+Route::get('/brand','PageController@brand');
 
 Route::get('/contact', 'PageController@contact');
 
