@@ -31,7 +31,7 @@ class PageController extends Controller
     public function brand(){
         $page = Page::where('type', 3)->first();
         if(!$page) abort('404');
-        $brands = Brand::all();
+        $brands = Brand::orderBy('piority','ASC')->get();
 
         return view('frontend.brand',compact('page','brands'));
     }
