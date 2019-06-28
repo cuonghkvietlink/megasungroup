@@ -9,11 +9,14 @@
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 
+@import '~owl.carousel/dist/assets/owl.carousel.css';
+
 body {
   background: #ffffff;
   padding: 0;
   margin: 0;
-  color: #222;
+  color: #333;
+  line-height: 1.8;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -38,28 +41,18 @@ header .container {
 }
 
 nav {
-  background-color: #f2f1f0;
+  background-color: #f2f1f0 !important;
+  padding: 5px !important;
 }
 
-nav .menu {
-  list-style: none;
-  text-align: center;
-  height: 45px;
-}
-
-nav .menu > li, nav a {
-  display: inline-block;
-}
-
-nav a {
-  text-decoration: none;
-  padding: 0 20px;
-  font-weight: 700;
-  height: 45px;
-  line-height: 45px;
+.menu .nav-link {
+  color: #0070AF;
+  font-weight: bold;
   text-transform: uppercase;
+  font-size: 16px;
+  padding-right: 1.2rem !important;
+  padding-left: 1.2rem !important;
 }
-
 section.home-content .home-content__description, section.home-content figure {
   width: 50%;
   float: left;
@@ -159,7 +152,6 @@ footer .brands__list li:nth-child(4) {
 .page-company, .page-contact {
   position: relative;
   padding: 30px 0 30px 0;
-  margin-top: -16px;
 }
 
 .page-company h1 {
@@ -195,12 +187,11 @@ h1 {
 
 .brand-list {
   padding-bottom: 30px;
-  border-bottom: solid 3px #AD945F;
   margin-top: 60px;
 }
 
 .brand-image img{
-  max-width: 100%;
+  max-width: 200px;
 }
 
 .brand-description {
@@ -238,5 +229,17 @@ h1 {
 }
 
 .head-office, .offices {
-  min-height: 300px;
+  min-height: 800px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.page-brand {
+  margin-top: 30px;
+}
+.page-company h2 {
+  color: #fff !important;
 }

@@ -1,7 +1,11 @@
 @extends('frontend.layouts.master')
 @section('content')
-    <section class="slider" style="margin-top: -16px; margin-bottom: 50px;">
-        <img src="http://www.vitalifesciences.com/assets/img/hero-02.jpg" style="max-height: 400px; width: 100%"/>
+    <section class="slider" style="margin-bottom: 50px;">
+        <div id="slider1" class="owl-carousel owl-theme">
+            @foreach($slides as $slide)
+                <div><img src="/storage/{{ $slide->image }}" alt="{{ $slide->name }}" /></div>
+            @endforeach
+        </div>
     </section>
     <section class="page home-content">
         <main class="container">
@@ -14,25 +18,22 @@
             <div class="clearfix"></div>
         </main>
     </section>
-
-    <section class="three-buckets">
+    <section class="three-buckets" style="display: none">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <a href="/brand">
-                        <img src="http://www.vitalifesciences.com/assets/img/bucket-01.jpg" alt="">
+                    <a href="/">
+                        <img src="g" alt="">
                     </a>
                 </div>
-
                 <div class="col-md-4">
-                    <a href="/investor">
-                        <img src="http://www.vitalifesciences.com/assets/img/bucket-01b.jpg" alt="">
+                    <a href="/">
+                        <img src="" alt="">
                     </a>
                 </div>
-
                 <div class="col-md-4">
-                    <a href="/company">
-                        <img src="http://www.vitalifesciences.com/assets/img/bucket-03b.jpg" alt="">
+                    <a href="/">
+                        <img src="" alt="">
                     </a>
                 </div>
             </div>
@@ -41,20 +42,57 @@
 @stop
 @section('brands')
     <div class="container brands">
-        <h3>Our Brands</h3>
-        <ul class="brands__list">
-            <li>
-                <a href="/brand"><img src="http://www.vitalifesciences.com/assets/img/logo-herbs-01b.png" alt="Herbs of Gold"></a>
-            </li>
-            <li>
-                <a href="/brand"><img src="http://www.vitalifesciences.com/assets/img/logo-vs-02.png" alt="Brand two"></a>
-            </li>
-            <li>
-                <a href="/brand"><img src="http://www.vitalifesciences.com/assets/img/logo-vl-03.png" alt="Brand three"></a>
-            </li>
-            <li>
-                <a href="/brand"><img src="http://www.vitalifesciences.com/assets/img/logo-vh-04.png" alt="Brand three"></a>
-            </li>
-        </ul>
+        <h3>Công ty thành viên</h3>
+        <div id="slider2" class="owl-carousel owl-theme">
+            @foreach($brands as $brand)
+                <div class="item">
+                    <a href="/brand"><img style="max-width: 150px" src="/storage/{{ $brand->image }}" alt="{{ $brand->name }}"></a>
+                </div>
+            @endforeach
+        </div>
     </div>
 @stop
+@push('js-stack')
+<script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#slider1').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:false,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:1
+                },
+                1000:{
+                    items:1
+                }
+            }
+        });
+
+        $('#slider2').owlCarousel({
+            items: 4,
+            loop:true,
+            margin:10,
+            nav:false,
+            autoplay:true,
+            autoplayTimeout:1000,
+            autoplayHoverPause:true,
+            responsive:{
+                0:{
+                    items:2
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:4
+                }
+            }
+        });
+    });
+</script>
+@endpush

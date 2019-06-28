@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Brand;
 use App\Page;
+use App\Slider;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -12,7 +13,12 @@ class PageController extends Controller
         $page = Page::where('type', 1)->first();
         if(!$page) abort('404');
 
-        return view('frontend.home',compact('page'));
+        $slides = Slider::orderBy('piority','ASC')->get();
+
+        $brands = Brand::all();
+
+
+        return view('frontend.home',compact('page','slides','brands'));
     }
 
     public function company(){
@@ -25,7 +31,6 @@ class PageController extends Controller
     public function brand(){
         $page = Page::where('type', 3)->first();
         if(!$page) abort('404');
-
         $brands = Brand::all();
 
         return view('frontend.brand',compact('page','brands'));

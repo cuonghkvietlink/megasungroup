@@ -2,7 +2,7 @@
 @section('content')
     <section class="page page-company">
         <main class="container">
-            <h1>OUR COMPANY</h1>
+            <h1>Tập đoàn chúng tôi</h1>
             <div class="row">
                 <div class="col-md-4">
                     {!! $page->content !!}

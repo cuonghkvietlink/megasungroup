@@ -7,7 +7,7 @@
 
             <div class="brands">
                 @foreach($brands as $brand)
-                    <div class="brand-list">
+                    <div class="brand-list" style="border-bottom: solid 3px {{ $brand->color }};">
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="brand-image">
@@ -16,7 +16,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="brand-title">
-                                    <h3 style="color: #1b1f58; font-size:17px; font-weight: 700;">{{ $brand->name }}</h3>
+                                    <h3 style="color: {{ $brand->color }}; font-size:17px; font-weight: 700;">{{ $brand->name }}</h3>
                                 </div>
                                 <div class="brand-description">
                                     {!! $brand->description !!}
@@ -24,7 +24,7 @@
                             </div>
                             <div class="col-md-2">
                                 <div class="brand-link">
-                                    <a href="{{ $brand->link }}" class="btn btn-primary">Visit Website</a>
+                                    <a href="{{ $brand->link }}" class="btn btn-primary" target="_blank"><span class="font-weight-bold">Truy cập Website</span></a>
                                 </div>
                             </div>
                         </div>
