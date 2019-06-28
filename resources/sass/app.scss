@@ -1,0 +1,242 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+body {
+  background: #ffffff;
+  padding: 0;
+  margin: 0;
+  color: #222;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header, header .container {
+  height: 100px;
+}
+header {
+  background: #0070AF;
+  border-bottom: 3px solid #ccc;
+}
+header img {
+  position: absolute;
+  height: 50px;
+  width: auto;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+header .container {
+  position: relative;
+}
+
+nav {
+  background-color: #f2f1f0;
+}
+
+nav .menu {
+  list-style: none;
+  text-align: center;
+  height: 45px;
+}
+
+nav .menu > li, nav a {
+  display: inline-block;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 0 20px;
+  font-weight: 700;
+  height: 45px;
+  line-height: 45px;
+  text-transform: uppercase;
+}
+
+section.home-content .home-content__description, section.home-content figure {
+  width: 50%;
+  float: left;
+}
+
+section.home-content figure img {
+  max-width: 90%;
+}
+
+footer {
+  text-align: center;
+}
+
+footer .brands h3 {
+  margin-top: 60px;
+  font-size: 1.6em;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+footer .brands__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer .brands__list li:nth-child(1) {
+  width: 150px;
+}
+
+footer .brands__list li {
+  position: relative;
+  width: 160px;
+  margin: 0 20px;
+  display: inline-block;
+}
+
+.global-footer {
+  color: #fff;
+  background-color: #0070AF;
+  padding: 20px 0;
+  font-weight: 700;
+  border-top: 5px solid #ccc;
+  margin-top: 30px;
+}
+a, h1, h2, h3, h4, h5 {
+  color: #0070AF;
+}
+
+li img {
+  max-width: 100%;
+}
+
+footer .brands__list li:nth-child(2) {
+  width: 160px;
+  top: -10px;
+}
+
+footer .brands__list li:nth-child(3) {
+  width: 130px;
+  top: -10px;
+}
+
+footer .brands__list li:nth-child(4) {
+  width: 200px;
+  top: -10px;
+}
+
+.page-contact:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(http://www.vitalifesciences.com/assets/img/contact-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+  opacity: 0.2;
+  content: '';
+}
+
+.page-company:before {
+  content: "";
+  background-image: url(http://www.vitalifesciences.com/assets/img/company-bg.jpg);
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+}
+
+.page-company, .page-contact {
+  position: relative;
+  padding: 30px 0 30px 0;
+  margin-top: -16px;
+}
+
+.page-company h1 {
+  margin-top: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 26px;
+}
+.page-company .col-md-4 {
+  color: #fff !important;
+  background-color: #0070AF;
+  padding: 20px;
+}
+.page-company .col-md-4 h4 {
+  color: #fff !important;
+}
+.page-company .col-md-8 {
+  padding-left: 0;
+  position: relative;
+}
+.page-company .col-md-8 img {
+  max-width: 100%;
+  min-height: 100%;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.brands {
+  margin-top: 60px;
+}
+
+.brand-list {
+  padding-bottom: 30px;
+  border-bottom: solid 3px #AD945F;
+  margin-top: 60px;
+}
+
+.brand-image img{
+  max-width: 100%;
+}
+
+.brand-description {
+  margin-top: 20px;
+}
+
+.brand-link a {
+  border-radius: 0;
+}
+
+.three-buckets img {
+  max-width: 100%;
+}
+
+.three-buckets {
+  margin-top: 60px;
+}
+
+.head-office {
+  color: #fff;
+  background-color: #0070AF;
+  padding: 20px;
+  line-height: 0.8;
+}
+
+.head-office h2 {
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.offices {
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.head-office, .offices {
+  min-height: 300px;
+}
