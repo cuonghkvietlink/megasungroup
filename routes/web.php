@@ -13,7 +13,7 @@
 
 Route::get('/', 'PageController@home');
 
-Route::get('/company','Pagecontroller@company');
+Route::get('/company','PageController@company');
 
 Route::get('/brand','PageController@brand');
 

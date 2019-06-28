@@ -55,23 +55,7 @@
 @yield('content')
 
 <footer>
-    <div class="container brands">
-        <h3>OUR BRANDS</h3>
-        <ul class="brands__list">
-            <li>
-                <a href="/brand"><img src="http://www.vitalifesciences.com/assets/img/logo-herbs-01b.png" alt="Herbs of Gold"></a>
-            </li>
-            <li>
-                <a href="/brand"><img src="http://www.vitalifesciences.com/assets/img/logo-vs-02.png" alt="Brand two"></a>
-            </li>
-            <li>
-                <a href="/brand"><img src="http://www.vitalifesciences.com/assets/img/logo-vl-03.png" alt="Brand three"></a>
-            </li>
-            <li>
-                <a href="/brand"><img src="http://www.vitalifesciences.com/assets/img/logo-vh-04.png" alt="Brand three"></a>
-            </li>
-        </ul>
-    </div>
+    @yield('brands')
     <div class="global-footer">
         <p>Vita Life Sciences</p>
     </div>
